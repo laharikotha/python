@@ -1,0 +1,28 @@
+//The provided code stub reads two integers from STDIN,a and b. Add code to print three lines where://
+
+1.The first line contains the sum of the two numbers.
+2.The second line contains the difference of the two numbers (first - second).
+3.The third line contains the product of the two numbers.
+
+
+code:
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    print(str(a+b)+"\n"+str(a-b)+"\n"+str(a*b))
+
+
+result:
+Input (stdin)
+3
+2
+Your Output (stdout)
+5
+1
+6
+Expected Output
+5
+1
+6
+BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of ServicePrivacy Policy

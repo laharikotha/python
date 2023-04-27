@@ -1,0 +1,24 @@
+//The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. Print the average of the marks array for the student name provided, showing 2 places after the decimal.//
+
+code:
+if __name__ == '__main__':
+    n = int(input())
+    x = [input().split() for i in range(n)]
+    c = input()
+    d = {}
+    for i in range(n):
+        d[x[i][0]] = list(map(float,x[i][1:]))
+    print(f'{sum(d[c])/len(d[c]):.2f}') 
+
+result:
+
+Input (stdin)
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+Your Output (stdout)
+56.00
+Expected Output
+56.00    
