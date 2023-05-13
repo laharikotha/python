@@ -1,0 +1,41 @@
+Complete the swap_case function in the editor below.
+
+swap_case has the following parameters:
+
+string s: the string to modify
+Returns
+
+string: the modified string
+Input Format
+
+A single line containing a string s.
+
+
+code:
+
+def swap_case(s):
+    SwAp = ''
+    for char in s:
+        if char.upper() != char:
+            SwAp += char.upper()
+        elif char.lower() != char:
+            SwAp += char.lower()
+        else:
+            SwAp += char
+    
+    
+    return SwAp
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
+Input (stdin)
+HackerRank.com presents "Pythonist 2".
+
+Output (stdout)
+hACKERrANK.COM PRESENTS "pYTHONIST 2".
+
+Expected Output
+hACKERrANK.COM PRESENTS "pYTHONIST 2".

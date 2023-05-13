@@ -1,0 +1,22 @@
+//You are given a 1-D array,A . Your task is to print the floor,ceil and rint of all the elements of A.//
+
+coding:
+
+import numpy
+
+numpy.set_printoptions(sign=' ')
+
+array = numpy.array(input().split(),float)
+
+print(numpy.floor(array))
+print(numpy.ceil(array))
+print(numpy.rint(array))
+
+
+Input (stdin)
+1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9
+Expected Output
+[ 1.  2.  3.  4.  5.  6.  7.  8.  9.]
+[  2.   3.   4.   5.   6.   7.   8.   9.  10.]
+[  1.   2.   3.   4.   6.   7.   8.   9.  10.]
+BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of ServicePrivacy Policy

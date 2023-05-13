@@ -1,0 +1,30 @@
+//Basically, namedtuples are easy to create, lightweight object types.
+They turn tuples into convenient containers for simple tasks.
+With namedtuples, you don’t have to use integer indices for accessing members of a tuple.//
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import namedtuple
+input_ = int(input())
+my_fields = input().split()
+total_marks = 0
+for _ in range(input_):
+    students = namedtuple('my_student', my_fields)
+    MARKS, CLASS, NAME, ID = input().split()
+    my_student = students(MARKS, CLASS, NAME, ID)
+    total_marks += int(my_student.MARKS)
+print((total_marks / input_))
+
+Input (stdin)
+5
+ID         MARKS      NAME       CLASS
+1          97         Raymond    7
+2          50         Steven     4
+3          91         Adrian     9
+4          72         Stewart    5
+5          80         Peter      6
+
+
+Expected Output
+78.00

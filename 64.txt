@@ -1,0 +1,39 @@
+//You are given two integer arrays, A and B of dimensions N X M.
+Your task is to perform the following operations:
+
+Add ( A+ B)
+Subtract (A - B)
+Multiply (A * B)
+Integer Division (A / B)
+Mod (A % B)
+Power (A ** B)//
+
+
+coding:
+
+import numpy
+
+N, M = map(int, input().split())
+
+A = numpy.array([list(map(int, input().split())) for n in range(N)])
+B = numpy.array([list(map(int, input().split())) for n in range(N)])
+
+print(A + B)
+print(A - B)
+print(A * B)
+print(A // B)
+print(A % B)
+print(A ** B)
+
+
+Input (stdin)
+1 4
+1 2 3 4
+5 6 7 8
+Expected Output
+[[ 6  8 10 12]]
+[[-4 -4 -4 -4]]
+[[ 5 12 21 32]]
+[[0 0 0 0]]
+[[1 2 3 4]]
+[[    1    64  2187 65536]]

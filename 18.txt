@@ -1,0 +1,32 @@
+You are given n words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
+
+
+coding:
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# importing module
+from collections import Counter
+
+integer1 = int(input())
+lst = [list(map(str, input().split())) for _ in range(integer1)]
+
+words = [x[0] for x in lst]
+
+print(len(Counter(words).keys()))
+val = list(Counter(words).values())
+listToStr = ' '.join([str(elem) for elem in val])
+print(listToStr) 
+
+
+Input (stdin)
+4
+bcdef
+abcdefg
+bcde
+bcdef
+
+
+Expected Output
+3
+2 1 1

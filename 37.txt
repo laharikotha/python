@@ -1,0 +1,31 @@
+//The defaultdict tool is a container in the collections class of Python. It's similar to the usual dictionary (dict) container, but the only difference is that a defaultdict will have a default value if that key has not been set yet. If you didn't use a defaultdict you'd have to check to see if that key exists, and if it doesn't, set it to what you want.//
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+input_n, input_m = map(int, input().split())
+d = defaultdict(list)
+for i in range(input_n):
+    ans1 = input()
+    d[ans1].append(i+1)
+for j in range(input_m):
+    ans2 = input()
+    if ans2 in d:
+        print(*d[ans2])
+    else:
+        print(-1)
+
+Input (stdin)
+5 2
+a
+a
+b
+a
+b
+a
+b
+
+Expected Output
+1 2 4
+3 5

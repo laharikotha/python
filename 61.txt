@@ -1,0 +1,29 @@
+//You are given two integer arrays of size N X P and MX P(N & M are rows, and P is the column). Your task is to concatenate the arrays along axis 0.//
+
+CODING:
+
+import numpy
+P, N, M = map(int,input().split())
+A = numpy.array([input().split() for _ in range(P)],int)
+B = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.concatenate((A, B), axis = 0))
+
+Input (stdin)
+4 3 2
+1 2
+1 2
+1 2
+1 2
+3 4
+3 4
+3 4
+
+
+Expected Output
+[[1 2]
+ [1 2]
+ [1 2]
+ [1 2]
+ [3 4]
+ [3 4]
+ [3 4]]

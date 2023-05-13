@@ -1,0 +1,28 @@
+//You are given a string s.
+Your task is to find the indices of the start and end of string k in s.//
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+S, k = input(), input()
+matches = re.finditer(r'(?=(' + k + '))', S)
+
+anymatch = False
+for match in matches:
+    anymatch = True
+    print((match.start(1), match.end(1) - 1))
+
+if anymatch == False:
+    print((-1, -1))
+
+
+Input (stdin)
+aaadaa
+aa
+
+Expected Output
+(0, 1)
+(1, 2)
+(4, 5)

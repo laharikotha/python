@@ -1,0 +1,38 @@
+The itertools module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an iterator algebra making it possible to construct specialized tools succinctly and efficiently in pure Python.
+
+To read more about the functions in this module, check out their documentation here.
+
+You are given a list of N lowercase English letters. For a given integer K, you can select any K indices (assume 1-based indexing) with a uniform probability from the list.
+
+Find the probability that at least one of the K indices selected will contain the letter: 'alpha'
+
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations, groupby
+
+# Read the input
+count, letters, to_select = int(input()), input().split(), int(input())
+
+# sort the letters so all a's are on left side
+letters = sorted(letters)
+
+# Find all possible combinations of to_select
+combinations_of_letters = list(combinations(letters, to_select))
+
+# find all which contain
+contain = len([c for c in combinations_of_letters if 'a' in c])
+
+# Print Results
+print(contain / len(combinations_of_letters))
+
+
+Input (stdin)
+4
+a a c d
+2
+
+
+Expected Output
+0.833333333333

@@ -1,0 +1,20 @@
+//You are given a complex z . Your task is to convert it to polar coordinates.
+
+	z=x+yi//
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath
+n = input()
+s = complex(n)
+print(abs(s))
+print(cmath.phase(s))
+
+Input (stdin)
+1+2j
+
+
+Expected Output
+2.23606797749979
+1.1071487177940904

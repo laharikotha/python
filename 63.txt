@@ -1,0 +1,18 @@
+//Your task is to print an array of size N X M With its main diagonal elements as 1's and 0's everywhere else.//
+
+
+CODING:
+
+import numpy
+
+numpy.set_printoptions(sign=' ')
+print(numpy.eye(*map(int, input().split())))
+
+
+Input (stdin)
+3 3
+
+Expected Output
+[[ 1.  0.  0.]
+ [ 0.  1.  0.]
+ [ 0.  0.  1.]]
