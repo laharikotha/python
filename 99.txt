@@ -1,0 +1,24 @@
+//You are given two arrays: A and B.
+Your task is to compute their inner and outer product.//
+
+
+coding:
+
+import numpy
+
+A=list(map(int,input().split()))
+B=list(map(int,input().split()))
+
+print(numpy.inner(A,B))
+print(numpy.outer(A,B))
+
+
+Input (stdin)
+0 1
+2 3
+
+
+Expected Output
+3
+[[0 0]
+ [2 3]]

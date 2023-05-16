@@ -1,0 +1,17 @@
+//You are given a space separated list of nine integers. Your task is to convert this list into a 3 X 3 NumPy array.//
+
+coding:
+
+import numpy
+
+print(numpy.array(input().split(), int).reshape(3, 3))
+
+
+Input (stdin)
+1 2 3 4 5 6 7 8 9
+
+
+Expected Output
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]

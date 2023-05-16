@@ -1,0 +1,63 @@
+//You are given an HTML code snippet of N lines.
+Your task is to print the single-line comments, multi-line comments and the data.
+
+Print the result in the following format:
+
+>>> Single-line Comment  
+Comment
+>>> Data                 
+My Data
+>>> Multi-line Comment  
+Comment_multiline[0]
+Comment_multiline[1]
+>>> Data
+My Data
+>>> Single-line Comment:  //
+
+
+coding:
+
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+
+    # HTML Parser - Part 2 in Python - Hacker Rank Solution START
+    def handle_comment(self, data):
+        if (len(data.split('\n')) != 1):
+            print(">>> Multi-line Comment")
+        else:
+            print(">>> Single-line Comment")
+        print(data.replace("\r", "\n"))
+    def handle_data(self, data):
+        if data.strip():
+            print(">>> Data")
+            print(data)
+    # HTML Parser - Part 2 in Python - Hacker Rank Solution END
+  
+html = ""       
+for i in range(int(input())):
+    html += input().rstrip()
+    html += '\n'
+    
+parser = MyHTMLParser()
+parser.feed(html)
+parser.close()
+
+input(stdin)
+4
+<!--[if IE 9]>IE9-specific content
+<![endif]-->
+<div> Welcome to HackerRank</div>
+<!--[if IE 9]>IE9-specific content<![endif]-->
+
+
+Expected Output
+>>> Multi-line Comment
+[if IE 9]>IE9-specific content
+<![endif]
+>>> Data
+ Welcome to HackerRank
+>>> Single-line Comment
+[if IE 9]>IE9-specific content<![endif]
+
+

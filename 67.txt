@@ -1,0 +1,25 @@
+//A valid postal code p have to fullfil both below requirements:
+
+1.p must be a number in the range from 100000 to 999999 inclusive.
+2. p must not contain more than one alternating repetitive digit pair.
+Alternating repetitive digits are digits which repeat immediately after the next digit. In other words, an alternating repetitive digit pair is formed by two equal digits that have just a single digit between them.//
+
+
+coding:
+
+regex_integer_in_range = r"^[1-9][\d]{5}$"    
+regex_alternating_repetitive_digit_pair = r"(\d)(?=\d\1)"    
+
+import re
+P = input()
+
+print (bool(re.match(regex_integer_in_range, P)) 
+and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2)
+
+
+Input (stdin)
+110000
+
+
+Expected Output
+False

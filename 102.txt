@@ -1,0 +1,17 @@
+//You are given the coefficients of a polynomial p.
+Your task is to find the value of p at point x.//
+
+coding:
+
+import numpy
+
+coefs=list(map(float,input().split()))
+x=float(input())
+
+print(numpy.polyval(coefs,x))
+
+Input (stdin)
+1.1 2 3
+0
+Expected Output
+3.0

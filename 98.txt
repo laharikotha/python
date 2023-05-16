@@ -1,0 +1,49 @@
+//You are given a 2-D array of size N X M.
+Your task is to find:
+
+1)The mean along axis 1.
+2)The var along axis 0.
+3)The std along axis none.//
+
+
+coding:
+
+import numpy
+nm = input()
+inm = nm.split( )
+inn = []
+for i in inm:
+    i = int(i)
+    inn.append(i)
+
+arr = []
+
+for i in range(0, inn[0]):
+    a = input()
+    k = []
+    b = a.split(" ")
+
+    for i in b:
+        i = int(i)
+        k.append(i)
+    arr.append(k)
+
+arn = numpy.array(arr)
+print(numpy.mean(arn, axis=1))
+print(numpy.var(arn, axis=0))
+z = numpy.std(arn, axis=None)
+j = round(z, 11)
+print(j)
+
+
+
+Input (stdin)
+2 2
+1 2
+3 4
+
+Expected Output
+[1.5 3.5]
+[1. 1.]
+1.11803398875
+

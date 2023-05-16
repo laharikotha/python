@@ -1,0 +1,29 @@
+//You are given a string s. It consists of alphanumeric characters, spaces and symbols(+,-).
+Your task is to find all the substrings of s that contains 2 or more vowels.
+Also, these substrings must lie in between 2 consonants and should contain vowels only.//
+
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+Storage = re.findall(r'(?<=[qwrtypsdfghjklzxcvbnm])([aeiou]{2,})(?=[qwrtypsdfghjklzxcvbnm])', input().strip(), re.IGNORECASE)
+
+if Storage:
+    for i in Storage:
+        print(i)
+else:
+    print(-1)
+
+
+Input (stdin)
+rabcdeefgyYhFjkIoomnpOeorteeeeet
+
+
+Expected Output
+ee
+Ioo
+Oeo
+eeeee

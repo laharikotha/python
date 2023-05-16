@@ -1,0 +1,25 @@
+//Perform append, pop, popleft and appendleft methods on an empty deque d.//
+
+coding:
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import deque
+D = deque()
+for _ in range(int(input())):
+    oper, val, *args = input().split() + ['']
+    eval(f'D.{oper} ({val})')
+print(*D)
+
+
+Input (stdin)
+6
+append 1
+append 2
+append 3
+appendleft 4
+pop
+popleft
+
+Expected Output
+1 2

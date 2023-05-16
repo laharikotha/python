@@ -1,0 +1,24 @@
+//You are given a string s .
+Your task is to find the first occurrence of an alphanumeric character in s (read from left to right) that has consecutive repetitions.//
+
+coding:
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+expression=r"([a-zA-Z0-9])\1+"
+
+m = re.search(expression,input())
+
+if m:
+    print(m.group(1))
+else:
+    print(-1)
+
+Input (stdin)
+12345678910111213141516171820212223
+
+
+Expected Output
+1

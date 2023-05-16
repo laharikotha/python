@@ -1,0 +1,21 @@
+//You are given a space separated list of numbers.
+Your task is to print a reversed NumPy array with the element type float.//
+
+coding:
+
+import numpy
+
+def arrays(arr):
+
+    return(numpy.array(arr[::-1], float))
+    
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
+
+
+Input (stdin)
+1 2 3 4 -8 -10
+
+Expected Output
+[-10.  -8.   4.   3.   2.   1.]
